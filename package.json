@@ -47,6 +47,7 @@
   "scripts": {
     "build": "medusa plugin:build && node scripts/sync-dist.mjs",
     "dev": "medusa plugin:develop",
+    "prepare": "medusa plugin:build && node scripts/sync-dist.mjs",
     "postinstall": "node scripts/install-medusa-output.mjs",
     "prepack": "medusa plugin:build && node scripts/sync-dist.mjs",
     "prepublishOnly": "medusa plugin:build && node scripts/sync-dist.mjs",
