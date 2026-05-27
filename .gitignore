@@ -1,0 +1,6 @@
+node_modules
+.medusa
+# dist
+
+# TypeScript sources stay local only (not committed); npm ships compiled dist/
+src/
