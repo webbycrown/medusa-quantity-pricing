@@ -1,0 +1,23 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GET = GET;
+const zod_1 = require("zod");
+const catalog_prices_1 = require("../../../../modules/pricing-engine/utils/catalog-prices");
+const CatalogPricesQuerySchema = zod_1.z.object({
+    product_id: zod_1.z.union([zod_1.z.string(), zod_1.z.array(zod_1.z.string())]).optional(),
+    currency_code: zod_1.z.union([zod_1.z.string(), zod_1.z.array(zod_1.z.string())]).optional(),
+});
+function toArray(value) {
+    if (!value) {
+        return [];
+    }
+    return Array.isArray(value) ? value : [value];
+}
+async function GET(req, res) {
+    const query = CatalogPricesQuerySchema.parse(req.query);
+    const productIds = toArray(query.product_id);
+    const currencyCodes = toArray(query.currency_code).map((c) => c.toLowerCase());
+    const catalog = await (0, catalog_prices_1.fetchCatalogPricesForProducts)(req.scope, productIds, currencyCodes);
+    res.json({ catalog });
+}
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicm91dGUuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi8uLi8uLi8uLi8uLi8uLi9zcmMvYXBpL2FkbWluL3F1YW50aXR5LXByaWNpbmcvY2F0YWxvZy1wcmljZXMvcm91dGUudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFpQkEsa0JBWUM7QUE1QkQsNkJBQXVCO0FBQ3ZCLDRGQUF1RztBQUV2RyxNQUFNLHdCQUF3QixHQUFHLE9BQUMsQ0FBQyxNQUFNLENBQUM7SUFDeEMsVUFBVSxFQUFFLE9BQUMsQ0FBQyxLQUFLLENBQUMsQ0FBQyxPQUFDLENBQUMsTUFBTSxFQUFFLEVBQUUsT0FBQyxDQUFDLEtBQUssQ0FBQyxPQUFDLENBQUMsTUFBTSxFQUFFLENBQUMsQ0FBQyxDQUFDLENBQUMsUUFBUSxFQUFFO0lBQ2pFLGFBQWEsRUFBRSxPQUFDLENBQUMsS0FBSyxDQUFDLENBQUMsT0FBQyxDQUFDLE1BQU0sRUFBRSxFQUFFLE9BQUMsQ0FBQyxLQUFLLENBQUMsT0FBQyxDQUFDLE1BQU0sRUFBRSxDQUFDLENBQUMsQ0FBQyxDQUFDLFFBQVEsRUFBRTtDQUNyRSxDQUFDLENBQUE7QUFFRixTQUFTLE9BQU8sQ0FBQyxLQUFvQztJQUNuRCxJQUFJLENBQUMsS0FBSyxFQUFFLENBQUM7UUFDWCxPQUFPLEVBQUUsQ0FBQTtJQUNYLENBQUM7SUFFRCxPQUFPLEtBQUssQ0FBQyxPQUFPLENBQUMsS0FBSyxDQUFDLENBQUMsQ0FBQyxDQUFDLEtBQUssQ0FBQyxDQUFDLENBQUMsQ0FBQyxLQUFLLENBQUMsQ0FBQTtBQUMvQyxDQUFDO0FBRU0sS0FBSyxVQUFVLEdBQUcsQ0FBQyxHQUFrQixFQUFFLEdBQW1CO0lBQy9ELE1BQU0sS0FBSyxHQUFHLHdCQUF3QixDQUFDLEtBQUssQ0FBQyxHQUFHLENBQUMsS0FBSyxDQUFDLENBQUE7SUFDdkQsTUFBTSxVQUFVLEdBQUcsT0FBTyxDQUFDLEtBQUssQ0FBQyxVQUFVLENBQUMsQ0FBQTtJQUM1QyxNQUFNLGFBQWEsR0FBRyxPQUFPLENBQUMsS0FBSyxDQUFDLGFBQWEsQ0FBQyxDQUFDLEdBQUcsQ0FBQyxDQUFDLENBQUMsRUFBRSxFQUFFLENBQUMsQ0FBQyxDQUFDLFdBQVcsRUFBRSxDQUFDLENBQUE7SUFFOUUsTUFBTSxPQUFPLEdBQUcsTUFBTSxJQUFBLDhDQUE2QixFQUNqRCxHQUFHLENBQUMsS0FBSyxFQUNULFVBQVUsRUFDVixhQUFhLENBQ2QsQ0FBQTtJQUVELEdBQUcsQ0FBQyxJQUFJLENBQUMsRUFBRSxPQUFPLEVBQUUsQ0FBQyxDQUFBO0FBQ3ZCLENBQUMifQ==

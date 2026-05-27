@@ -2,4 +2,6 @@ node_modules
 .medusa
 
 # TypeScript sources stay local only (not committed); npm ships compiled dist/
-src/
+/src/
+!/dist/
+!/dist/src/
