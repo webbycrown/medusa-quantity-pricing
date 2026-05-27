@@ -69,14 +69,30 @@
     "react-router-dom": "^6.0.0"
   },
   "peerDependenciesMeta": {
-    "@medusajs/admin-sdk": { "optional": true },
-    "@medusajs/icons": { "optional": true },
-    "@medusajs/js-sdk": { "optional": true },
-    "@medusajs/ui": { "optional": true },
-    "@tanstack/react-query": { "optional": true },
-    "react": { "optional": true },
-    "react-dom": { "optional": true },
-    "react-router-dom": { "optional": true }
+    "@medusajs/admin-sdk": {
+      "optional": true
+    },
+    "@medusajs/icons": {
+      "optional": true
+    },
+    "@medusajs/js-sdk": {
+      "optional": true
+    },
+    "@medusajs/ui": {
+      "optional": true
+    },
+    "@tanstack/react-query": {
+      "optional": true
+    },
+    "react": {
+      "optional": true
+    },
+    "react-dom": {
+      "optional": true
+    },
+    "react-router-dom": {
+      "optional": true
+    }
   },
   "devDependencies": {
     "@medusajs/admin-sdk": "2.15.3",
@@ -92,6 +108,7 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "6.30.3",
+    "ts-node": "^10.9.2",
     "typescript": "^5.6.2"
   },
   "engines": {
