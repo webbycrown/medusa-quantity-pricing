@@ -1,5 +1,5 @@
 {
-  "name": "@webbycrown/medusa-quantity-pricing",
+  "name": "@webbycrown/medusa-quantity-pricing-rules",
   "version": "1.0.0",
   "description": "Medusa v2 plugin: quantity range pricing engine with admin UI, store API, and PostgreSQL-backed tiers",
   "homepage": "https://github.com/webbycrown/medusa-quantity-pricing",

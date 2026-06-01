@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to [`@webbycrown/medusa-quantity-pricing`](https://www.npmjs.com/package/@webbycrown/medusa-quantity-pricing) are documented in this file.
+All notable changes to [`@webbycrown/medusa-quantity-pricing-rules`](https://www.npmjs.com/package/@webbycrown/medusa-quantity-pricing-rules) are documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 

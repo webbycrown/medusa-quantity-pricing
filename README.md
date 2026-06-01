@@ -1,6 +1,6 @@
-# @webbycrown/medusa-quantity-pricing
+# @webbycrown/medusa-quantity-pricing-rules
 
-[![npm version](https://img.shields.io/npm/v/@webbycrown/medusa-quantity-pricing.svg)](https://www.npmjs.com/package/@webbycrown/medusa-quantity-pricing)
+[![npm version](https://img.shields.io/npm/v/@webbycrown/medusa-quantity-pricing-rules.svg)](https://www.npmjs.com/package/@webbycrown/medusa-quantity-pricing-rules)
 
 Medusa v2 plugin for **quantity range pricing** (volume / tiered / wholesale). Set unit prices by quantity with fixed prices, percentage discounts, or fixed amount-off tiers.
 
@@ -27,7 +27,7 @@ Medusa v2 plugin for **quantity range pricing** (volume / tiered / wholesale). S
 ## Installation
 
 ```bash
-npm install @webbycrown/medusa-quantity-pricing
+npm install @webbycrown/medusa-quantity-pricing-rules
 ```
 
 Register in `medusa-config.ts`:
@@ -38,7 +38,7 @@ import { defineConfig } from "@medusajs/framework/utils"
 export default defineConfig({
   plugins: [
     {
-      resolve: "@webbycrown/medusa-quantity-pricing",
+      resolve: "@webbycrown/medusa-quantity-pricing-rules",
       options: {},
     },
   ],
@@ -162,7 +162,7 @@ import {
   PRICING_ENGINE_MODULE,
   resolveQuantityUnitPrice,
   fetchCatalogPricesForProducts,
-} from "@webbycrown/medusa-quantity-pricing"
+} from "@webbycrown/medusa-quantity-pricing-rules"
 
 const unitPrice = await resolveQuantityUnitPrice(container, {
   product_id: "prod_01...",
@@ -185,7 +185,7 @@ import {
   createQuantityPricingRuleWorkflow,
   updateQuantityPricingRuleWorkflow,
   deleteQuantityPricingRuleWorkflow,
-} from "@webbycrown/medusa-quantity-pricing/workflows"
+} from "@webbycrown/medusa-quantity-pricing-rules/workflows"
 ```
 
 | Export | Purpose |
