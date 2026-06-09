@@ -1,8 +1,10 @@
-# @webbycrown/medusa-quantity-pricing-rules
+# Medusa Quantity Pricing Rules
 
 [![npm version](https://img.shields.io/npm/v/@webbycrown/medusa-quantity-pricing-rules.svg)](https://www.npmjs.com/package/@webbycrown/medusa-quantity-pricing-rules)
 
 Medusa v2 plugin for **quantity range pricing** (volume / tiered / wholesale). Set unit prices by quantity with fixed prices, percentage discounts, or fixed amount-off tiers.
+
+[![Watch the Medusa Quantity Pricing Rules demo on YouTube](https://raw.githubusercontent.com/webbycrown/medusa-quantity-pricing/main/public/Play.png)](https://www.youtube.com/watch?v=CjBjc7j3H6g)
 
 ![Quantity pricing admin — product tiers with fixed price or discounts](https://raw.githubusercontent.com/webbycrown/medusa-quantity-pricing/main/public/walkthrough-img.png)
 
@@ -106,6 +108,7 @@ Non-overlapping ranges per product + currency are recommended. When ranges overl
 | `region_id` | No | Regional override |
 | `quantity` | No | When set, includes `calculated_price` |
 | `base_unit_price` | No | Catalog price for discount tiers |
+
 
 ```http
 GET /store/quantity-pricing?product_id=prod_01XXXX&currency_code=inr&quantity=25

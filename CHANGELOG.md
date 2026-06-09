@@ -1,11 +1,16 @@
 # Changelog
 
-All notable changes to [`@webbycrown/medusa-quantity-pricing-rules`](https://www.npmjs.com/package/@webbycrown/medusa-quantity-pricing-rules) are documented in this file.
+All notable changes to `[@webbycrown/medusa-quantity-pricing-rules](https://www.npmjs.com/package/@webbycrown/medusa-quantity-pricing-rules)` are documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
+## [1.0.1] - 2026-06-05
 
-## [1.0.0] - 2026-05-27
+### Changed
+
+- Added Medusa integrations directory npm keywords: `medusa-plugin-integration`, `medusa-v2-plugin-other`.
+
+## [1.0.0](https://github.com/webbycrown/medusa-quantity-pricing/releases/tag/v1.0.0) - 2026-05-27
 
 **Initial public release.**
 
@@ -33,7 +38,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 - `GET /admin/quantity-pricing/:id` — retrieve rule
 - `PUT /admin/quantity-pricing/:id` — update rule
 - `DELETE /admin/quantity-pricing/:id` — delete rule
-- Zod validation and admin auth middleware on `/admin/quantity-pricing*`
+- Zod validation and admin auth middleware on `/admin/quantity-pricing`*
 
 #### Store API
 
@@ -58,5 +63,3 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ---
 
-[Unreleased]: https://github.com/webbycrown/medusa-quantity-pricing/compare/v1.0.0...HEAD
-[1.0.0]: https://github.com/webbycrown/medusa-quantity-pricing/releases/tag/v1.0.0
