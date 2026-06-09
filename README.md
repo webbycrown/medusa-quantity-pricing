@@ -6,7 +6,7 @@ Medusa v2 plugin for **quantity range pricing** (volume / tiered / wholesale). S
 
 [![Watch the Medusa Quantity Pricing Rules demo on YouTube](https://raw.githubusercontent.com/webbycrown/medusa-quantity-pricing/main/public/Play.png)](https://www.youtube.com/watch?v=CjBjc7j3H6g)
 
-![Quantity pricing admin — product tiers with fixed price or discounts](https://raw.githubusercontent.com/webbycrown/medusa-quantity-pricing/main/public/walkthrough-img.png)
+**Watch demo:** [https://www.youtube.com/watch?v=CjBjc7j3H6g](https://www.youtube.com/watch?v=CjBjc7j3H6g)
 
 ## Features
 
@@ -19,12 +19,17 @@ Medusa v2 plugin for **quantity range pricing** (volume / tiered / wholesale). S
 - Optional variant, region, and customer-group scoping
 - Exported helpers: `resolveQuantityUnitPrice`, catalog utilities, workflows
 
+
+
 ## Requirements
 
 | Requirement | Version |
 |-------------|---------|
 | Node.js | 20+ |
 | Medusa | v2.13+ (`@medusajs/framework` ^2.13) |
+
+
+![Quantity pricing admin — product tiers with fixed price or discounts](https://raw.githubusercontent.com/webbycrown/medusa-quantity-pricing/main/public/walkthrough-img.png)
 
 ## Installation
 
