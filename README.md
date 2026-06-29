@@ -242,6 +242,8 @@ npx medusa db:migrate
 
 See [CHANGELOG.md](./CHANGELOG.md).
 
-## Author
 
-**WebbyCrown** — [info@webbycrown.com](mailto:info@webbycrown.com) · [webbycrown.com](https://webbycrown.com)
+
+<div align="center">
+<strong>Made with ❤️ by <a href="https://www.webbycrown.com/">WebbyCrown</a></strong>
+</div>
